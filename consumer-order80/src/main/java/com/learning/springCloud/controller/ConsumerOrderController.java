@@ -26,8 +26,8 @@ public class ConsumerOrderController {
 
     @GetMapping("/create")
     public CommonResult<Payment> create(Payment payment) {
-        System.out.println("成功进入Controller层");
-        System.out.println("payment的值为： " + payment);
+        log.info("成功进入Controller层!");
+        log.info("payment的值为: " + payment);
         return restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, CommonResult.class);
     }
 
