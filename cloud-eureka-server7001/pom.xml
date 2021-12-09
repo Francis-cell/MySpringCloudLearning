@@ -9,36 +9,28 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.learning</groupId>
-    <artifactId>payment8801</artifactId>
+    <artifactId>cloud-eureka-server7001</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>payment8801</name>
-    <description>payment8801</description>
+    <name>cloud-eureka-server7001</name>
+    <description>cloud-eureka-server7001</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-        <!-- 引入自定义的jar包,这个包目前专门用来存放实体类等可以重复使用的资源 -->
         <dependency>
             <groupId>com.learning</groupId>
             <artifactId>cloudCommonApis</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -50,41 +42,13 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- Mybatis plus 依赖项 -->
-        <!--mybatis-plus 持久层-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.0</version>
-        </dependency>
-        <!-- mybatis-plus分页插件 -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
-            <version>3.4.0</version>
-        </dependency>
-        <!-- 添加 代码生成器 依赖 -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.5.1</version>
-        </dependency>
-
-        <!-- velocity 模板引擎, Mybatis Plus 代码生成器需要 -->
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity-engine-core</artifactId>
-            <version>2.3</version>
-        </dependency>
-
-        <!-- 服务注册中心的客户端 eureka-client -->
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
+        <!-- 服务注册中心的服务端 eureka-server -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
             <version>3.0.4</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -103,4 +67,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
