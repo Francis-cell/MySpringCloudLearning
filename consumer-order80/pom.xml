@@ -29,11 +29,6 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
@@ -44,19 +39,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Mybatis-plus -->
-        <!--mybatis-plus 持久层-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.1.2</version>
-        </dependency>
-        <!-- mybatis-plus分页插件 -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus</artifactId>
-            <version>3.4.0</version>
-        </dependency>
     </dependencies>
 
     <build>

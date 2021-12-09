@@ -20,22 +20,22 @@ public class PaymentServiceImpl implements PaymentService {
     private PaymentMapper paymentMapper;
 
     @Override
-    public int create(Payment payment) {
-        int insert = paymentMapper.insert(payment);
+    public Payment create(Payment payment) {
+        int insert = paymentMapper.createPayment(payment);
         if (insert != 0) {
             System.out.println("插入数据成功！");
         } else {
             System.out.println("插入数据失败！");
         }
-        return insert;
+        return payment;
     }
 
     @Override
     public Payment getPaymentById(Long id) {
-        System.out.println("Service层执行开始！");
+//        System.out.println("Service层执行开始！");
 //        id = 1L;
         Payment payment = paymentMapper.selectById(id);
-        System.out.println("payment的值为： " + payment);
+//        System.out.println("payment的值为： " + payment);
         if (payment != null && !payment.equals("")) {
             System.out.println("查询数据成功！");
         }

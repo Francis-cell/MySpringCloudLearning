@@ -12,7 +12,7 @@ import com.learning.payment8801.pojo.Payment;
  */
 public interface PaymentService {
     // 新建一条数据
-    public int create(Payment payment);
+    public Payment create(Payment payment);
     // 通过payment的id查询payment对象
     public Payment getPaymentById(Long id);
 }
