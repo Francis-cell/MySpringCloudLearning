@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.learning.payment8801.mapper")
+@MapperScan("com.learning.springCloud.mapper")
 public class Payment8801Application {
 
     public static void main(String[] args) {
