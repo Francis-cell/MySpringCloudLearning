@@ -1,4 +1,4 @@
-package com.learning.payment8801;
+package com.learning.springCloud;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

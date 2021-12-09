@@ -1,6 +1,6 @@
-package com.learning.payment8801.service;
+package com.learning.springCloud.service;
 
-import com.learning.payment8801.pojo.Payment;
+import com.learning.springCloud.entities.Payment;
 
 /**
  * <p>

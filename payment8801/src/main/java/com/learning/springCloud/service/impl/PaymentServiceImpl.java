@@ -1,8 +1,8 @@
-package com.learning.payment8801.service.impl;
+package com.learning.springCloud.service.impl;
 
-import com.learning.payment8801.mapper.PaymentMapper;
-import com.learning.payment8801.pojo.Payment;
-import com.learning.payment8801.service.PaymentService;
+import com.learning.springCloud.entities.Payment;
+import com.learning.springCloud.mapper.PaymentMapper;
+import com.learning.springCloud.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.learning.payment8801;
+package com.learning.springCloud;
 
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;

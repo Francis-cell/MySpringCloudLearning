@@ -1,7 +1,7 @@
-package com.learning.payment8801.mapper;
+package com.learning.springCloud.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.learning.payment8801.pojo.Payment;
+import com.learning.springCloud.entities.Payment;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;

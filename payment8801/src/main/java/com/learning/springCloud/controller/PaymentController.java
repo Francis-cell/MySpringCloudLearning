@@ -1,9 +1,9 @@
-package com.learning.payment8801.controller;
+package com.learning.springCloud.controller;
 
 
-import com.learning.payment8801.pojo.CommonResult;
-import com.learning.payment8801.pojo.Payment;
-import com.learning.payment8801.service.PaymentService;
+import com.learning.springCloud.entities.CommonResult;
+import com.learning.springCloud.entities.Payment;
+import com.learning.springCloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

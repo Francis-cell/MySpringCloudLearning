@@ -1,4 +1,4 @@
-package com.learning.consumerorder80;
+package com.learning.springCloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

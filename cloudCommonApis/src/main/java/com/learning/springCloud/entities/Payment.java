@@ -1,4 +1,4 @@
-package com.learning.consumerorder80.pojo;
+package com.learning.springCloud.entities;
 
 
 import lombok.AllArgsConstructor;

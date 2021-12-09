@@ -1,4 +1,4 @@
-package com.learning.consumerorder80.config;
+package com.learning.springCloud.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
