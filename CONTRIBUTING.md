@@ -1,4 +1,4 @@
-完成第一个微服务以及它的调用者Consumer
+1、完成第一个微服务以及它的调用者Consumer
 
-进行代码重构，将重复使用的实体类封装到cloudCommonApis中，并package成本地的jar包，在使用到这些实体类的moudle中的pom.xml文件中引入
+2、进行代码重构，将重复使用的实体类封装到cloudCommonApis中，并package成本地的jar包，在使用到这些实体类的moudle中的pom.xml文件中引入
 
