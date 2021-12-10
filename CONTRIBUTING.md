@@ -15,3 +15,5 @@
 8、添加Zookeeper使用案例，开始使用Zookeeper的服务
 
 9、添加Zookeeper Consumer案例，并完成配置，测试通过
+
+10、在Windows本地完成Consul环境的搭建，并完成Server案例、配置、测试通过
