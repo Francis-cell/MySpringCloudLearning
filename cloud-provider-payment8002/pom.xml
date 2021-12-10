@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.learning</groupId>
-    <artifactId>payment8801</artifactId>
+    <artifactId>cloud-provider-payment8802</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>payment8801</name>
-    <description>payment8801</description>
+    <name>cloud-provider-payment8802</name>
+    <description>cloud-provider-payment8802</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>

@@ -1,33 +1,42 @@
-package com.learning.springcloud.service.impl;
+package com.learning.springCloud.service.impl;
 
-import com.learning.springcloud.dao.PaymentDao;
-import com.learning.springcloud.entities.Payment;
-import com.learning.springcloud.service.PaymentService;
+import com.learning.springCloud.entities.Payment;
+import com.learning.springCloud.mapper.PaymentMapper;
+import com.learning.springCloud.service.PaymentService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service("paymentService")
+/**
+ * <p>
+ *  服务实现类
+ * </p>
+ *
+ * @author zhumengren
+ * @since 2021-12-08
+ */
+@Service
+@Slf4j
 public class PaymentServiceImpl implements PaymentService {
-
     @Autowired
-    private PaymentDao paymentDao;
+    private PaymentMapper paymentMapper;
 
     @Override
-    public int create(Payment payment) {
-        int insert = paymentDao.insert(payment);
+    public Payment create(Payment payment) {
+        int insert = paymentMapper.createPayment(payment);
         if (insert != 0) {
-            System.out.println("插入数据成功！");
+            log.info("插入数据成功！");
         } else {
-            System.out.println("插入数据失败！");
+            log.info("插入数据失败！");
         }
-        return insert;
+        return payment;
     }
 
     @Override
     public Payment getPaymentById(Long id) {
-        Payment payment = paymentDao.selectById(id);
+        Payment payment = paymentMapper.selectById(id);
         if (payment != null && !payment.equals("")) {
-            System.out.println("查询数据成功！");
+            log.info("查询数据成功！");
         }
         return payment;
     }
