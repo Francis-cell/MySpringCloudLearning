@@ -7,7 +7,12 @@ import com.learning.springCloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * <p>
@@ -26,6 +31,9 @@ public class PaymentController {
 
     @Value("${server.port}")
     private String serverPort;
+
+    @Resource
+    private DiscoveryClient discoveryClient;
 
     /**
      * @Author zhumengren
@@ -55,7 +63,6 @@ public class PaymentController {
      */
     @GetMapping("/get/{id}")
     public CommonResult getPaymentById(@PathVariable("id") Long id) {
-        log.info("Controler层执行开始");
         Payment paymentById = paymentService.getPaymentById(id);
         if (paymentById != null) {
             return new CommonResult(200, "成功查询到数据！ServerPort: " + serverPort, paymentById);
@@ -63,5 +70,32 @@ public class PaymentController {
             return new CommonResult(405, "数据没有被查询到！查询时使用的id是" + id);
         }
     }
+
+
+
+    /**
+     * @Author zhumengren
+     * @param
+     * @Date 2021/12/10 11:24
+     * @Description 显示服务中的详细信息
+     */
+    @GetMapping("/discovery")
+    public Object discovery() {
+        // 获取所有的服务名
+        List<String> services = discoveryClient.getServices();
+        for (String service : services) {
+            log.info("*****service: " + service);
+        }
+
+        // 获取对应服务名下的详细信息
+        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
+        for (ServiceInstance instance : instances) {
+            log.info(instance.getServiceId() + "\t" + instance.getHost()
+                    + "\t" + instance.getPort() + "\t" + instance.getUri());
+        }
+
+        return this.discoveryClient;
+    }
+
 }
 
