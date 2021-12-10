@@ -1,0 +1,19 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: cloud-payment-service
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db2021?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+
+  # 注册Zookeeper到注册中心
+  cloud:
+    zookeeper:
+      connect-string: 192.168.214.138:2181
+
+
