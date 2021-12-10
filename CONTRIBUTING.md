@@ -13,3 +13,5 @@
 7、增加获取服务提供者详细信息的方法，可通过localhost:8001/payment/discovery 测试，查看服务提供者所提供的详细信息
 
 8、添加Zookeeper使用案例，开始使用Zookeeper的服务
+
+9、添加Zookeeper Consumer案例，并完成配置，测试通过
