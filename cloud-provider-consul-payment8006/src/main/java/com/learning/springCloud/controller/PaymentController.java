@@ -21,12 +21,13 @@ import java.util.UUID;
 @RequestMapping("/payment")
 @Slf4j
 public class PaymentController {
-
     @Value("${server.port}")
     private String serverPort;
 
-    @GetMapping("/consul")
+    @GetMapping("/consul/getPort")
     public String paymentConsul() {
         return "SpringCloud with consul: " + serverPort + "\t" + UUID.randomUUID().toString();
     }
+
+
 }
