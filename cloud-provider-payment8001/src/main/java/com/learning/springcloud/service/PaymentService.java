@@ -11,8 +11,9 @@ import com.learning.springCloud.entities.Payment;
  * @since 2021-12-08
  */
 public interface PaymentService {
-    // 新建一条数据
+    /** 新建一条数据 */
     public Payment create(Payment payment);
-    // 通过payment的id查询payment对象
+
+    /** 通过payment的id查询payment对象 */
     public Payment getPaymentById(Long id);
 }

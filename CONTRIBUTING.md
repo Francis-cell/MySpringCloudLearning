@@ -19,3 +19,5 @@
 10、在Windows本地完成Consul环境的搭建，并完成Server案例、配置、测试通过
 
 11、Consul 客户端和服务端的搭建以及运行
+
+12、修复consumer order出现的问题，删除原有moudel，新建moudel解决
