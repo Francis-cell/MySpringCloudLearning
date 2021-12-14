@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.learning</groupId>
-    <artifactId>consumer-order80</artifactId>
+    <artifactId>cloud-consumer-oreder80</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>consumer-order80</name>
-    <description>consumer-order80</description>
+    <name>cloud-consumer-oreder80</name>
+    <description>cloud-consumer-oreder80</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -24,7 +24,6 @@
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -46,7 +45,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <!-- 服务注册中心的客户端 eureka-client -->
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
         <dependency>

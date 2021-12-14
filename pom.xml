@@ -14,6 +14,10 @@
     <module>cloud-eureka-server7001</module>
     <module>cloudCommonApis</module>
     <module>consumer-order80</module>
+    <module>cloud-provider-consul-payment8006</module>
+    <module>cloud-consumer-consul-order80</module>
+    <module>cloud-comsumer-zk-order80</module>
+    <module>cloud-provider-payment8004</module>
   </modules>
   <name>Maven</name>
   <packaging>pom</packaging>
@@ -145,6 +149,32 @@
         <filtering>false</filtering>
       </resource>
     </resources>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+          <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+            <encoding>UTF-8</encoding>
+            <!-- 过期的方法的警告
+              <compilerArgs>
+                  <arg>-Xlint:deprecation</arg>
+              </compilerArgs> -->
+            <compilerArguments>
+              <!-- 是否输出所有的编译信息（包括类的加载等）-->
+              <!--<verbose />-->
+              <!-- 解决maven命令编译报错，因为rt.jar 和jce.jar在jre的lib下面，不在jdk的lib下面，
+              导致maven找不到（java7以后会出现这个问题），将这2个jar包拷贝到jdk的lib下面估计也好使-->
+              <bootclasspath>${java.home}\lib\rt.jar;${java.home}\lib\jce.jar</bootclasspath>
+            </compilerArguments>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 
 </project>
