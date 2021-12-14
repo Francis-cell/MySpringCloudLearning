@@ -1,10 +1,10 @@
-package com.learning.springCloud;
+package com.example.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConsumerOrder80ApplicationTests {
+class TestApplicationTests {
 
     @Test
     void contextLoads() {

@@ -8,9 +8,9 @@ import org.springframework.web.client.RestTemplate;
 /**
  * @ClassName ApplicationContextConfig
  * @Description TODO
- * @Author zhumengren
- * @Date 2021/12/9 11:07
- * @Email zhumengren@sinosoft.com.cn
+ * @Author 86185
+ * @Date 2021/12/14 11:02
+ * @Email zhumengren@sinosoft.com
  * @Version 1.0
  **/
 @Configuration
