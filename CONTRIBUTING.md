@@ -21,3 +21,5 @@
 11、Consul 客户端和服务端的搭建以及运行
 
 12、修复consumer order出现的问题，删除原有moudel，新建moudel解决
+
+13、添加OpenFeign部分的代码，并完成测试
