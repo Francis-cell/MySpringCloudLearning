@@ -8,3 +8,9 @@ eureka:
     register-with-eureka: false # 不注册进eureka服务中心
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+
+# Feign 日志配置项
+logging:
+  level:
+    # Feign日志以什么级别监控哪个接口
+    com.learning.springCloud.service.PaymentFeignService: debug

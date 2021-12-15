@@ -9,23 +9,19 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.learning</groupId>
-    <artifactId>cloud-eureka-server7001</artifactId>
+    <artifactId>cloud-provider-hystrix-payment8001</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cloud-eureka-server7001</name>
-    <description>cloud-eureka-server7001</description>
+    <name>cloud-provider-hystrix-payment8001</name>
+    <description>cloud-provider-hystrix-payment8001</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.learning</groupId>
-            <artifactId>cloudCommonApis</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -42,22 +38,29 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- 服务注册中心的服务端 eureka-server -->
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server -->
+
+        <!-- 自定义API jar包 -->
+        <dependency>
+            <groupId>com.learning</groupId>
+            <artifactId>cloudCommonApis</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!-- 服务注册中心的客户端 eureka-client -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
             <version>3.0.4</version>
         </dependency>
 
-        <!--Hystrix只有release版本，故而需要调整才能进行测试-->
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>-->
-<!--            <version>2.2.9.RELEASE</version>-->
-<!--        </dependency>-->
-
+        <!-- Hystrix -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-hystrix -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <version>2.2.7.RELEASE</version>
+        </dependency>
 
     </dependencies>
 
