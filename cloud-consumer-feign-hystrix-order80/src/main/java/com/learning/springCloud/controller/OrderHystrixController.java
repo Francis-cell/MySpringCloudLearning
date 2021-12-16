@@ -1,8 +1,8 @@
 package com.learning.springCloud.controller;
 
 import com.learning.springCloud.service.PaymentHystrixService;
+import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +22,8 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/consumer/payment/hystrix")
 @Slf4j
+/** 配置默认的兜底方法（目的：避免代码膨胀） */
+@DefaultProperties(defaultFallback = "payment_Global_FallbackMethod")
 public class OrderHystrixController {
     @Resource
     private PaymentHystrixService paymentHystrixService;
@@ -32,9 +34,11 @@ public class OrderHystrixController {
         return result;
     }
 
-    @HystrixCommand(fallbackMethod = "paymentTimeOutFallbackMethod",commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "1500")  //3秒钟以内就是正常的业务逻辑
-    })
+    // @HystrixCommand(fallbackMethod = "paymentTimeOutFallbackMethod",commandProperties = {
+    //         @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "1500")  //3秒钟以内就是正常的业务逻辑
+    // })
+    /** 此处使用一个单独的@HystrixCommand注解，意味着没有配置它的专属兜底方法，故而一旦出错或者超时将调用默认的兜底方法 */
+    @HystrixCommand
     @GetMapping("/timeout/{id}")
     public String paymentInfo_TimeOut(@PathVariable("id") Integer id) {
         // 自己制造一个异常，使得方法直接跳转到兜底方法里去
@@ -43,8 +47,15 @@ public class OrderHystrixController {
         return result;
     }
 
-    //兜底方法
+    /** 兜底方法 */
     public String paymentTimeOutFallbackMethod(@PathVariable("id") Integer id){
         return "我是消费者80，对付支付系统繁忙请10秒钟后再试或者自己运行出错请检查自己,(┬＿┬)";
     }
+
+    /** global fallback方法 */
+    public String payment_Global_FallbackMethod(){
+        return "Global异常处理信息，请稍后再试,(┬＿┬)";
+    }
+
+
 }

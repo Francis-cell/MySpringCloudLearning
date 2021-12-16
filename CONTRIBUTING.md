@@ -27,3 +27,5 @@
 14、Hystrix 基本样例搭建完毕
 
 15、Hystrix 服务端降级保护
+
+16、Hystrix 消费端consumer降级保护，hystrix的服务降级一般使用的地方也是客户端consumer的，不过也可以根据自身对服务降级的需求进行调整
