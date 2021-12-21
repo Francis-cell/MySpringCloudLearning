@@ -9,18 +9,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.learning</groupId>
-    <artifactId>cloud-provider-hystrix-payment8001</artifactId>
+    <artifactId>cloud-gateway-gateway9527</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cloud-provider-hystrix-payment8001</name>
-    <description>cloud-provider-hystrix-payment8001</description>
+    <name>cloud-gateway-gateway9527</name>
+    <description>cloud-gateway-gateway9527</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -38,19 +34,19 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!-- 自定义API jar包 -->
-        <dependency>
-            <groupId>com.learning</groupId>
-            <artifactId>cloudCommonApis</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
         <!-- 服务注册中心的客户端 eureka-client -->
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <version>3.0.4</version>
+        </dependency>
+
+        <!-- gateway -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-gateway -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
             <version>3.0.4</version>
         </dependency>
 
@@ -61,15 +57,6 @@
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
             <version>2.2.7.RELEASE</version>
         </dependency>
-
-        <!-- spring-boot-starter-actuator -->
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-            <version>2.6.1</version>
-        </dependency>
-
     </dependencies>
 
     <build>
