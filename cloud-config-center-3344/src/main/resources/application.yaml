@@ -1,0 +1,18 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+#          uri:  git@github.com:Francis-cell/springCloud-config.git
+          uri:  https://github.com/Francis-cell/springCloud-config.git
+          search-paths:
+            - springCloud-config
+      label: main
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7001/eureka # 注册到 Eureka Server 7001上
