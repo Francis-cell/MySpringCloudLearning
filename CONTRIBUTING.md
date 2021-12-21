@@ -35,3 +35,5 @@
 18、完成gateway网关部分的学习，包括它的三个要点：Route、Predicate、Filter的使用
 
 19、添加配置中心服务端cloud-config-center-3344的使用
+
+20、添加配置客户端cloud-config-client-3355的使用
