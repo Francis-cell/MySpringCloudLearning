@@ -1,0 +1,18 @@
+server:
+  port: 3355
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    # 客户端配置
+    config:
+      # 下面3个部分整合到一块儿：master分支上的config-dev.yaml文件被读取
+      label: main # 分支名称
+      name: config # 配置文件名称
+      profile: dev # 读取文件后缀名称
+      uri: http://localhost:3344 # 配置中心地址 Config server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
